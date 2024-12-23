@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoVille - Nina Wu</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+<body class="project-page" data-project="echoville">
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/logo.png" alt="Nina's Logo" class="logo-image">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../assets/Resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-detail">
+            <!-- 浮动导航栏 -->
+            <nav class="floating-nav">
+                <ul class="floating-nav-list">
+                    
+                    <li><a href="#background" class="floating-nav-link">Background</a></li>
+                    <li><a href="#research" class="floating-nav-link">Research</a></li>
+                    <li><a href="#insights" class="floating-nav-link">Insights</a></li>
+                    <li><a href="#UI Design" class="floating-nav-link">UI Design</a></li>
+                    <li><a href="#product design" class="floating-nav-link">Product Design</a></li>
+                    <li><a href="#development" class="floating-nav-link">Development</a></li>
+                    <li><a href="#finalization" class="floating-nav-link">Finalization</a></li>
+                </ul>
+            </nav>
+
+            <section class="project-hero">
+                <div class="project-intro">
+                    <h1>EchoVille: Listening Training Adventure</h1>
+                    <p class="project-description">Due to long-term hearing loss, those hearing-impaired’s ability to process sounds diminishes over time. Children with hearing impairments are found to face considerable communication challenges in about 10%-20% of situations, even with the assistance of hearing aids. This project aims to design an intelligent product that incorporates training game in simulated scenarios to help hearing-impaired children practice their sound differentiation and pronunciation skills, enabling them to communicate more effectively with others.</p>
+                </div>
+                <div class="hero-image-container">
+                    <img 
+                        src="../assets/echoville/1.png" 
+                        alt="DIANDIAN Project Overview" 
+                        class="hero-image"
+                        onerror="console.log('Image failed to load')"
+                    />
+                </div>
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <h3>Project Type</h3>
+                        <p>Intelligent Product<br>
+                            Gamification<br>
+                            OpenMV</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Timeline</h3>
+                        <p>Jul 2024 - Nov 2024</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Team</h3>
+                        <p>1 Product Designer<br>
+                           1 UI Designer</p>
+
+                    </div>
+                    <div class="overview-item">
+                        <h3>My Role</h3>
+                        <p>Research<br>
+                           Product Design<br>
+                           Coding</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Tools</h3>
+                        <p>Figma<br>
+                           Blender<br>
+                           AIGC tools<br>
+                           OpenMV<br>
+                           Unity</p>
+                    </div>
+                </div>
+                
+                <!-- 修改跳转按钮容器 -->
+                <div class="demo-button-container">
+                    <button class="demo-button" onclick="scrollToVideo()">
+                        Skip to watch demo video ↓
+                    </button>
+                </div>
+            </section>
+
+            <!-- Background Section -->
+            <div class="content-block" id="background">
+                <h2>Background: Why do hearing-impaired children still have communication difficulties even with hearing aids?</h2>
+                <div class="background-section">
+                    <div class="section-content">
+                        <h3><img src="../assets/echoville/star.png" alt="star" class="title-icon">Feature</h3>
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <h4>Decreased speech discrimination ability</h4>
+                                <p>It may reduce the activity of the auditory nerve and affect the ability of processing audio signals.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Lack of sound stimulation</h4>
+                                <p>It is the basis of language learning. Through audio stimulation, individuals are able to recognize different tones, syllables and speech features.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Difficulty communicating</h4>
+                                <p>Individuals may have difficulty understanding what others say, especially in complex or rapid conversations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <h3><img src="../assets/echoville/star.png" alt="star" class="title-icon">Problem Scenario</h3>
+                        <img src="../assets/echoville/scenario.png" alt="Problem Scenario" class="training-image">
+                    </div>
+                    <div class="section-content">
+                        <h3><img src="../assets/echoville/star.png" alt="star" class="title-icon">How to Solve?</h3>
+                        <div class="solve-grid">
+                            <div class="solve-left">
+                                <img src="../assets/echoville/solve1.png" alt="Solution Illustration" class="solve-image">
+                            </div>
+                            <div class="solve-right">
+                                <h4>Reasons</h4>
+                                <ul class="solve-list">
+                                    <li>Solving the problem of delayed speech development</li>
+                                    <li>Helping children to better express their emotions</li>
+                                    <li>Improving self-awareness and confidence</li>
+                                </ul>
+                                <img src="../assets/echoville/3-7.png" alt="Additional Solution" class="solve-additional-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block" id="research">
+                <h2>Research</h2>
+                <div class="research-section">
+                    <div class="section-content">
+                        <h3><img src="../assets/echoville/star.png" alt="star" class="title-icon">Intervention Methods</h3>
+                        <img src="../assets/echoville/Intervention.png" alt="Intervention Methods" class="training-image">
+                    </div>
+                    <div class="section-content">
+                        <h3><img src="../assets/echoville/star.png" alt="star" class="title-icon">Training Research</h3>
+                        <img src="../assets/echoville/training.png" alt="Training Research" class="training-image">
+                    </div>
+                    <div class="section-content">
+                        <h3><img src="../assets/echoville/star.png" alt="star" class="title-icon">Professional Training</h3>
+                        <img src="../assets/echoville/6sound.png" alt="Professional Training" class="training-image"> <!-- 内容将添加 -->
+                    </div>
+                    <div class="section-content">
+                        <h3><img src="../assets/echoville/star.png" alt="star" class="title-icon">User Observation</h3>
+                        <img src="../assets/echoville/observation.png" alt="User Observation" class="training-image"><!-- 内容将添加 -->
+                    </div>
+                    <div class="section-content">
+                        <h3><img src="../assets/echoville/star.png" alt="star" class="title-icon">User interviews</h3>
+                        <img src="../assets/echoville/interview.png" alt="User Interviews" class="training-image">
+                    </div>
+                    <div class="section-content">
+                        <h3><img src="../assets/echoville/star.png" alt="star" class="title-icon">Persona</h3>
+                        <img src="../assets/echoville/persona.png" alt="Persona" class="training-image"><!-- 内容将添加 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block" id="insights">
+                <h2>Insights</h2>
+                <img src="../assets/echoville/insight.png" alt="insight" class="training-image"><!-- 内容根据项目需求添加 -->
+                <div class="section-content">
+                    <h3><img src="../assets/echoville/star.png" alt="star" class="title-icon">Game Blueprint & Training Method</h3>
+                    <img src="../assets/echoville/game.png" alt="Game" class="training-image"><!-- 内容将添加 -->
+                </div>
+            </div>
+
+            <div class="content-block" id="UI Design">
+                <h2>UI Design</h2>
+                <div class="touchpoint-images">
+                    <div class="touchpoint-image-item">
+                        <img src="../assets/echoville/ui1.png" alt="UI Design 1" class="touchpoint-image">
+                        <p class="touchpoint-caption">Home</p>
+                    </div>
+                    <div class="touchpoint-image-item">
+                        <img src="../assets/echoville/ui2.png" alt="UI Design 2" class="touchpoint-image">
+                        <p class="touchpoint-caption">Sound Identification</p>
+                    </div>
+                </div>
+                <div class="touchpoint-images">
+                    <div class="touchpoint-image-item">
+                        <img src="../assets/echoville/ui3.png" alt="UI Design 3" class="touchpoint-image">
+                        <p class="touchpoint-caption">Pronunciation</p>
+                    </div>
+                    <div class="touchpoint-image-item">
+                        <img src="../assets/echoville/ui4.png" alt="UI Design 4" class="touchpoint-image">
+                        <p class="touchpoint-caption">Correct Pronunciation</p>
+                    </div>
+                </div>
+                <div class="touchpoint-images">
+                    <div class="touchpoint-image-item">
+                        <img src="../assets/echoville/ui5.png" alt="UI Design 5" class="touchpoint-image">
+                        <p class="touchpoint-caption">Correct Feedback</p>
+                    </div>
+                    <div class="touchpoint-image-item">
+                        <img src="../assets/echoville/ui6.png" alt="UI Design 6" class="touchpoint-image">
+                        <p class="touchpoint-caption">Incorrect Feedback</p>
+                    </div>
+                </div>
+                <div class="touchpoint-images">
+                    <div class="touchpoint-image-item">
+                        <img src="../assets/echoville/ui7.png" alt="UI Design 7" class="touchpoint-image">
+                        <p class="touchpoint-caption">Congratulatiions</p>
+                    </div>
+                    <div class="touchpoint-image-item">
+                        <img src="../assets/echoville/ui8.png" alt="UI Design 8" class="touchpoint-image">
+                        <p class="touchpoint-caption">Scene Selection</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block" id="product design">
+                <h2>Product Design</h2>
+                <img src="../assets/echoville/product.png" alt="Product Design" class="product-image">
+            </div>
+
+            <div class="content-block" id="development">
+                <h2>Development</h2>
+                <img src="../assets/echoville/development.png" alt="Development Process" class="development-image">
+            </div>
+
+            <div class="content-block" id="finalization">
+                <h2>Finalization</h2>
+                <img src="../assets/echoville/final.png" alt="Final Result" class="final-image">
+                
+                <!-- YouTube 视频部分 -->
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/XIIQwJhwTKA?si=atARJ4aOcYItZTB6" 
+                        title="EchoVille Demo Video"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="project-navigation">
+        <h3>Other Projects</h3>
+        <div class="other-projects">
+            <a href="gamepad.html" class="project-link">Phone Shell Gamepad</a>
+            <a href="ai-news-war.html" class="project-link">AI News War</a>
+            <a href="diandian.html" class="project-link">DIANDIAN</a>
+            <a href="scrapping.html" class="project-link">Vehicle Scrapping Specialist</a>
+        </div>
+    </div>
+
+    <!-- 图片模态框 -->
+    <div class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script src="../js/floating-nav.js"></script>
+</body>
+</html> 

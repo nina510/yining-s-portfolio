@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self'; default-src 'self' https://ajax.googleapis.com; script-src 'self' 'unsafe-inline' https://ajax.googleapis.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline';">
+    <meta http-equiv="Cache-Control" content="max-age=31536000, public">
+    <title>DIANDIAN: Mobile Charging System - Nina's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+<body class="project-page" data-project="diandian">
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/logo.png" alt="Nina's Logo" class="logo-image">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../assets/Resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <div class="floating-nav">
+            <ul class="floating-nav-list">
+                <li><a href="#background" class="floating-nav-link">Background</a></li>
+                <li><a href="#research" class="floating-nav-link">Research</a></li>
+                <li><a href="#insights" class="floating-nav-link">Insights</a></li>
+                <li><a href="#system" class="floating-nav-link">System & Service</a></li>
+                <li><a href="#touchpoint-01" class="floating-nav-link">Touchpoint 01</a></li>
+                <li><a href="#touchpoint-02" class="floating-nav-link">Touchpoint 02</a></li>
+                <li><a href="#review" class="floating-nav-link">VOLVO Review</a></li>
+            </ul>
+        </div>
+
+        <section class="project-hero">
+            <div class="project-intro">
+                <h1>DIANDIAN: Mobile Charging System</h1>
+                <p class="project-description">DIANDIAN is a mobile charging system, which contains <strong>mobile charging post</strong>, <strong>vehicle HMI</strong> and <strong>Vehicle-Road-Cloud Platform</strong>, designed to solve the problem of charging difficulty on highways during peak holiday periods in China, providing car owners with high-speed, intelligent and considerate charging solution.</p>
+            </div>
+            <div class="hero-image-container">
+                <img 
+                    src="../assets/diandian/1.jpg" 
+                    alt="DIANDIAN Project Overview" 
+                    class="hero-image"
+                    onerror="console.log('Image failed to load')"
+                />
+            </div>
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <h3>Project Type</h3>
+                    <p>System Design<br>
+                       HMI Design<br>
+                       Mobility Design</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Timeline</h3>
+                    <p>Dec 2023 - Jun 2024</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Team</h3>
+                    <p>1 Designer<br>
+                       2 Engineer<br>
+                       2 BA</p>
+                </div>
+                <div class="overview-item">
+                    <h3>My Role</h3>
+                    <p>Team Leader<br>
+                       Product Owner<br>
+                       UX Designer</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Tools</h3>
+                    <p>Figma<br>
+                       Blender</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="content-block" id="background">
+                <h2>Background</h2>
+                <div class="background-grid">
+                    <div class="background-left">
+                        <h3>▶ Holiday travel dilemma in China</h3>
+                        <div class="point-list">
+                            <div class="point">
+                                <span class="point-marker">➤</span>
+                                <span class="point-text">EVs take <strong>more than twice time</strong> to travel to their destinations due to difficulties of charging in service-areas on highways during holidays.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-right">
+                        <div class="background-image">
+                            <img src="../assets/diandian/2.png" alt="Holiday travel dilemma in China" class="content-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="background-grid">
+                    <div class="background-left">
+                        <h3>▶ Service-areas on Chinese Highways</h3>
+                        <div class="point-list">
+                            <div class="point">
+                                <span class="point-marker">➤</span>
+                                <span class="point-text">About <strong>6,000</strong> service-areas in China</span>
+                            </div>
+                            <div class="point">
+                                <span class="point-marker">➤</span>
+                                <span class="point-text">Average of <strong>4.2</strong> charging piles per service-area</span>
+                            </div>
+                            <div class="point">
+                                <span class="point-marker">➤</span>
+                                <span class="point-text">Each EV queues for <strong>2hr+</strong> to be charged at peak times</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-right">
+                        <div class="background-image">
+                            <img src="../assets/diandian/3.png" alt="Service-areas on Chinese Highways" class="content-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="background-grid">
+                    <div class="background-left">
+                        <h3>▶ Retired EV batteries in China</h3>
+                        <div class="point-list">
+                            <div class="point">
+                                <span class="point-marker">➤</span>
+                                <span class="point-text">Batteries retire when the capacity is less than <strong>80%</strong>, but they can still be used in other scenarios</span>
+                            </div>
+                            <div class="point">
+                                <span class="point-marker">➤</span>
+                                <span class="point-text">There are already <strong>580k+</strong> retired batteries until 2023</span>
+                            </div>
+                            <div class="point">
+                                <span class="point-marker">➤</span>
+                                <span class="point-text">The recycling market for retired batteries is expected to exceed <strong>100 billion yuan</strong> by 2030</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-right">
+                        <div class="background-image">
+                            <img src="../assets/diandian/4.png" alt="Charging Pile Distribution" class="content-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="background-grid">
+                    <div class="background-left">
+                        <h3>▶ VOLVO's battery recycling planning</h3>
+                        <div class="point-list">
+                            <div class="point">
+                                <span class="point-marker">➤</span>
+                                <span class="point-text">Volvo plans to <strong>reuse retired batteries</strong> in energy storage systems</span>
+                            </div>
+                            <div class="point">
+                                <span class="point-marker">➤</span>
+                                <span class="point-text">Aiming to achieve <strong>carbon neutrality</strong> by 2040</span>
+                            </div>
+                            <div class="point">
+                                <span class="point-marker">➤</span>
+                                <span class="point-text">Exploring <strong>innovative solutions</strong> for sustainable development</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-right">
+                        <div class="background-image">
+                            <img src="../assets/diandian/5.png" alt="VOLVO's battery recycling planning" class="content-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block" id="research">
+                <h2>Research</h2>
+                
+                <!-- Existing Solutions -->
+                <div class="research-section" id="existing-solutions">
+                    <h3>▶ Existing Solutions</h3>
+                    <div class="solutions-grid">
+                        <div class="solution-item">
+                            <img src="../assets/diandian/solution1.png" alt="Mobile Charging Van" class="solution-image">
+                            <h4>More Fixed Charging Piles</h4>
+                            <div class="solution-points">
+                                <div class="point-item">
+                                    <img src="../assets/diandian/pros.png" alt="pros" class="pros-icon">
+                                    <p>Sufficient supply</p>
+                                </div>
+                                <div class="point-item">
+                                    <img src="../assets/diandian/cons.png" alt="cons" class="pros-icon">
+                                    <p>Too high cost</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <img src="../assets/diandian/solution2.png" alt="Portable Charger" class="solution-image">
+                            <h4>Advanced Travel Planning</h4>
+                            <div class="solution-points">
+                                <div class="point-item">
+                                    <img src="../assets/diandian/pros.png" alt="pros" class="pros-icon">
+                                    <p>Intelligent</p>
+                                </div>
+                                <div class="point-item">
+                                    <img src="../assets/diandian/cons.png" alt="cons" class="pros-icon">
+                                    <p>Ineffective in chaotic situations</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <img src="../assets/diandian/solution3.png" alt="Battery Swap Station" class="solution-image">
+                            <h4>High-voltage Fast Charging</h4>
+                            <div class="solution-points">
+                                <div class="point-item">
+                                    <img src="../assets/diandian/pros.png" alt="pros" class="pros-icon">
+                                    <p>rapid recharge</p>
+                                </div>
+                                <div class="point-item">
+                                    <img src="../assets/diandian/cons.png" alt="cons" class="pros-icon">
+                                    <p>Worries about damaging batteries</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <img src="../assets/diandian/solution4.png" alt="Fixed Charging Station" class="solution-image">
+                            <h4>Battery Swap Station</h4>
+                            <div class="solution-points">
+                                <div class="point-item">
+                                    <img src="../assets/diandian/pros.png" alt="pros" class="pros-icon">
+                                    <p>Time-saving</p>
+                                </div>
+                                <div class="point-item">
+                                    <img src="../assets/diandian/cons.png" alt="cons" class="pros-icon">
+                                    <p>Limited to NIO cars</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution-conclusion" id="solution-section">
+                        <h4>Conclusion</h4>
+                        <p>Lack of 
+                            <a href="#insights" class="highlight-text back-to-insight">economical</a> and 
+                            <a href="#insights" class="highlight-text back-to-insight">user-friendly</a> solutions for 
+                            <a href="#insights" class="highlight-text back-to-insight">complex situation</a> 
+                            which is adapted to all brands of vehicles.</p>
+                    </div>
+                </div>
+
+                <!-- User Interviews -->
+                <div class="research-section">
+                    <h3>▶ User Interviews</h3>
+                    <p class="section-description">We interviewed a number of owners, and the following is a selection of the two most representative of them.</p>
+                    <div class="interviews-grid">
+                        <div class="interview-column" id="time-wasting-section">
+                            <img src="../assets/diandian/interview1.png" alt="Interview Insights 1" class="interview-image">
+                            <div class="interview-conclusion">
+                                <h4>My Thoughts</h4>
+                                <p>He mainly suffers from <a href="#goals-table" class="highlight-text">time-wasting</a> during the charging process.</p>
+                            </div>
+                        </div>
+                        <div class="interview-column" id="unsureness-section">
+                            <img src="../assets/diandian/interview2.png" alt="Interview Insights 2" class="interview-image">
+                            <div class="interview-conclusion">
+                                <h4>My Thoughts</h4>
+                                <p>She always has <a href="#goals-table" class="highlight-text">unsureness</a> about any problems and conditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Persona -->
+                <div class="research-section">
+                    <h3>▶ Persona</h3>
+                    <p class="section-description">Based on the user interviews, we generalized the persona and mapped the user story for this character.</p>
+                    <img src="../assets/diandian/persona.png" alt="Persona" class="full-width-image">
+                </div>
+
+                <div class="content-block">
+                    <h3>▶ User Journey Map</h3>
+                    <p class="section-description">Based on the research, we believe that the charging problem involves a long time period, in which the behaviors, moods, goals and pain points are complex. So we used the User Journey Map to further sort out and identify design opportunities.</p>
+                    <img src="../assets/diandian/journey.png" alt="User Journey Map" class="full-width-image">
+                </div>
+            </div>
+
+            <!-- Insights Section -->
+            <div class="content-block" id="insights">
+                <h2>Insights</h2>
+                <div class="insights-grid">
+                    <div class="insight-item">
+                        <div class="insight-image-container">
+                            <h3>Mobile Charging Station</h3>
+                            <p class="insight-subtitle">
+                                <a href="#solution-section" class="highlight-text insight-link">economical</a> 
+                                step-use of electricity
+                            </p>
+                        </div>
+                        <img src="../assets/diandian/insight1.png" alt="Mobile Charging Post" class="insight-detail-image">
+                    </div>
+                    <div class="insight-item">
+                        <div class="insight-image-container">
+                            <h3>Vehicle HMI</h3>
+                            <p class="insight-subtitle">
+                                <a href="#solution-section" class="highlight-text insight-link">user-friendly</a> 
+                                charging experience
+                            </p>
+                        </div>
+                        <img src="../assets/diandian/insight2.png" alt="Vehicle HMI" class="insight-detail-image">
+                    </div>
+                    <div class="insight-item">
+                        <div class="insight-image-container">
+                            <h3>Vehicle-Road-Cloud</h3>
+                            <p class="insight-subtitle">
+                                platform for 
+                                <a href="#solution-section" class="highlight-text insight-link">complex situation</a>
+                            </p>
+                        </div>
+                        <img src="../assets/diandian/insight3.png" alt="Vehicle-Road-Cloud Platform" class="insight-detail-image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block" id="system">
+                <h2>System & Service</h2>
+                <div class="design-grid">
+                    <div class="design-left">
+                        <h3>▶ System Map</h3>
+                        <p>To refine insights' feasibility, we use a system map to analyze the stakeholders involved in the project and their internal flow relationships before conducting specific touchpoint design from a macro perspective.</p>
+                    </div>
+                    <div class="design-right">
+                        <img src="../assets/diandian/system-map.png" alt="System Map" class="design-image">
+                    </div>
+                </div>
+                <div class="design-section">
+                    <h3>▶ Service Blueprint</h3>
+                    <p>We then use the service blueprint to help us understand the service process and touchpoints from both the user's and provider's perspectives, ensuring not only a seamless charging experience, but also the whole step-use of electricity.</p>
+                    <img src="../assets/diandian/service-blueprint.png" alt="Service Blueprint" class="design-image">
+                </div>
+            </div>
+
+            <div class="content-block" id="touchpoint-01">
+                <h2>Touchpoint 01: Vehicle HMI</h2>
+                <div class="goals-table" id="goals-table">
+                    <div class="table-row">
+                        <div class="table-cell header-cell">Goals</div>
+                        <div class="table-cell header-cell">Strategy</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <h4>
+                                from<br>
+                                <a href="#time-wasting-section" class="highlight-text">time-wasting</a><br>
+                                to<br>
+                                time-saving
+                            </h4>
+                        </div>
+                        <div class="table-cell">
+                            <div class="goal-image">
+                                <img src="../assets/diandian/goal1.png" alt="Time-saving goal" class="touchpoint-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <h4>
+                                from<br>
+                                <a href="#unsureness-section" class="highlight-text">unsureness</a><br>
+                                to<br>
+                                sureness
+                            </h4>
+                        </div>
+                        <div class="table-cell">
+                            <div class="goal-image">
+                                <img src="../assets/diandian/goal2.png" alt="Sureness goal" class="touchpoint-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block dark-section">
+                <div class="view-work-banner">
+                    <h2>VIEW MY FINAL WORK</h2>
+                    <img src="../assets/diandian/click.png" alt="click-icon" class="click-icon">
+                </div>
+
+                <div class="hidden-content" style="display: none;">
+                    <h3>▶ Pre & In Charging</h3>
+                    <div class="touchpoint-images">
+                        <div class="touchpoint-image-item">
+                            <img src="../assets/diandian/hmi-pre.png" alt="Pre-charging Interface" class="touchpoint-image">
+                            <p class="touchpoint-caption">Showing the optimal route before driving</p>
+                        </div>
+                        <div class="touchpoint-image-item">
+                            <img src="../assets/diandian/hmi-in.png" alt="In-charging Interface" class="touchpoint-image">
+                            <p class="touchpoint-caption">In driving mode</p>
+                        </div>
+                    </div>
+
+                    <h3>▶ Need Charging</h3>
+                    <div class="touchpoint-images">
+                        <div class="touchpoint-image-item">
+                            <img src="../assets/diandian/hmi-need1.png" alt="Need Charging Interface 1" class="touchpoint-image">
+                            <p class="touchpoint-caption">Charging reservation information</p>
+                        </div>
+                        <div class="touchpoint-image-item">
+                            <img src="../assets/diandian/hmi-need2.png" alt="Need Charging Interface 2" class="touchpoint-image">
+                            <p class="touchpoint-caption">Route in service-area</p>
+                        </div>
+                    </div>
+                    <div class="touchpoint-images">
+                        <div class="touchpoint-image-item">
+                            <img src="../assets/diandian/hmi-need3.png" alt="Need Charging Interface 3" class="touchpoint-image">
+                            <p class="touchpoint-caption">Welcome to charge</p>
+                        </div>
+                        <div class="touchpoint-image-item">
+                            <img src="../assets/diandian/hmi-need4.png" alt="Need Charging Interface 4" class="touchpoint-image">
+                            <p class="touchpoint-caption">On charge mode: Visualizing charging</p>
+                        </div>
+                    </div>
+
+                    <h3>▶ Charging</h3>
+                    <div class="touchpoint-images">
+                        <div class="touchpoint-image-item">
+                            <img src="../assets/diandian/hmi-charging1.png" alt="Charging Interface 1" class="touchpoint-image">
+                            <p class="touchpoint-caption">Welcome to charge</p>
+                        </div>
+                        <div class="touchpoint-image-item">
+                            <img src="../assets/diandian/hmi-charging2.png" alt="Charging Interface 2" class="touchpoint-image">
+                            <p class="touchpoint-caption">On charge mode: Visualizing charging</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block" id="touchpoint-02">
+                <h2>Touchpoint 02: Mobile Charging Station</h2>
+                <div class="design-grid">
+                    <div class="design-left">
+                        <h3>▶ Scenario</h3>
+                        <p>When DIANDIAN is parked in the service-area, it can provide charging service to vehicles.</p>
+                    </div>
+                    <div class="design-right">
+                        <div class="goal-image">
+                            <img src="../assets/diandian/goal3.png" alt="Mobile Charging Post Goals" class="design-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="design-section">
+                    <h3>▶ UX Design</h3>
+                    <p>An interface is designed to help users to follow the charging process and get the charging information.</p>
+                    <img src="../assets/diandian/ux-design.png" alt="UX Design" class="design-image">
+                </div>
+            </div>
+
+            <div class="content-block" id="review">
+                <h2>VOLVO Team Review</h2>
+                <img src="../assets/diandian/review.png" alt="VOLVO Team Review" class="full-width-image">  
+            </div>
+        </section>
+    </main>
+
+    <!-- 在 body 结束标签前添加模态框 -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- 在 body 结束标签前，其他脚本之后加 -->
+    <script src="../js/image-zoom.js"></script>
+    <script src="../js/banner-click.js"></script>
+    <script src="../js/floating-nav.js"></script>
+
+    <!-- 在 body 结束标签前添加 -->
+    <div class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <div class="project-navigation">
+        <h3>Other Projects</h3>
+        <div class="other-projects">
+            <a href="echoville.html" class="project-link">EchoVille</a>
+            <a href="gamepad.html" class="project-link">Phone Shell Gamepad</a>
+            <a href="ai-news-war.html" class="project-link">AI News War</a>
+            <a href="scrapping.html" class="project-link">Vehicle Scrapping Specialist</a>
+        </div>
+    </div>
+</body>
+</html> 
