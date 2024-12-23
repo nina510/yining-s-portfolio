@@ -1,0 +1,1023 @@
+/* 基础样式 */
+:root {
+    --primary: #000000;
+    --secondary: #666666;
+    --bg-color: #FFFFFF;
+    --border-color: #000000;
+    --text-color: #333333;
+    --blue: #CDF2FF;
+    --pink: #FFB4B4;
+    --cyan: #00E8D7;
+    --green: #CFFF6F;
+    --yellow: #FFDD7B;
+}
+
+/* 重置默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* 添加渐变格子背景 */
+body:not(.project-page)::before {
+    display: none;
+}
+
+/* 添加项目页面的专门样式 */
+.project-page {
+    /* 删除这行 background-color: #FFFFFF !important; */
+}
+
+.project-page::before {
+    display: none !important;
+}
+
+/* 导航栏样式 */
+.header {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 76%;
+    max-width: 1200px;
+    background-color: white;
+    border: 2px solid #000000;
+    margin: 0;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header:hover {
+    transform: translate(-50%, -5px);
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.15);
+}
+
+.nav {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* 导航链接悬停效果 */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* 当前页面激活状态 */
+.nav-links a.active {
+    color: #000;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* 主页英雄区域 */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0;
+    overflow: hidden;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-content {
+    width: 76%;
+    max-width: 1160px;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    padding: 0 2rem;
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 5.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.name-line {
+    margin: 0;
+    padding: 0;
+}
+
+.content-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.hero-content .name {
+    color: #6B46C1;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    position: relative;
+    text-shadow: 10px 10px 20px #fff94c;
+    font-size: 7rem;
+    white-space: nowrap;
+}
+
+.hero-content .name:hover {
+    color: transparent;
+}
+
+.hero-content .name:hover::after {
+    content: attr(data-full-name);
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    color: #6B46C1;
+    font-style: normal;
+    font-weight: 700;
+    font-size: inherit;
+}
+
+.hero-content .action {
+    color: #000;
+}
+
+.hero-content .highlight {
+    color: #6B46C1;
+    background: linear-gradient(120deg, #6B46C1, #D6BCFA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content .highlight-2 {
+    color: #6B46C1;
+    background: linear-gradient(-60deg, #6B46C1, #D6BCFA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.interests {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 2rem;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.view-work-button {
+    margin-top: 2rem;
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000000;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+.view-work-button:hover {
+    background-color: #333333;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.1);
+}
+
+/* 添加滚动锁定类 */
+.scroll-lock {
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Tab 样式 */
+.tabs {
+    width: 76%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+    padding: 0;
+}
+
+.tab-list {
+    position: absolute;
+    left: 2rem;
+    top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 120px;
+}
+
+.tab-button {
+    padding: 8px 0;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-align: left;
+    position: relative;
+}
+
+.tab-button:hover {
+    color: var(--primary);
+    transform: translateX(10px);
+}
+
+.tab-button.active {
+    color: var(--primary);
+    font-weight: 500;
+    transform: translateX(15px);
+}
+
+.about-grid {
+    width: 100%;
+    margin-left: 140px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* 项目卡片样式 */
+.project-card {
+    width: 100%;
+    background-color: white;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(107, 70, 193, 0.1));
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-card img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    transition: all 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 8px 0;
+    flex-grow: 1;
+}
+
+.project-card:hover .project-info {
+    transform: translateY(-5px);
+}
+
+.project-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-info h3 {
+    color: #000000;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-content .name {
+        font-size: 4rem;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .logo {
+        margin: 0 auto;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.5rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content .name {
+        font-size: 3.5rem;
+    }
+
+    .header {
+        width: 90%;
+    }
+}
+
+/* 调整 about 区域的位置 */
+.about {
+    position: relative;
+    padding-top: 100px;
+    z-index: 2;
+    background-color: transparent;
+}
+
+/* 项目标签按钮样式 */
+.project-tags {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+}
+
+.tag-button {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    color: #000000;
+    background-color: transparent;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    cursor: default;
+    transition: all 0.2s ease;
+}
+
+/* 修改卡片布局样式 */
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    width: 76%;
+    margin: 120px auto 80px;
+    padding: 0;
+    min-height: calc(100vh - 300px);
+    align-content: center;
+}
+
+.intro-card {
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+/* 卡片颜色 */
+.intro-card.blue {
+    background-color: #A8E0E9;
+}
+
+.intro-card.orange {
+    background-color: #FFB562;
+}
+
+.intro-card.pink {
+    background-color: #FFB4B4;
+}
+
+.intro-card.green {
+    background-color: #CFFF6F;
+}
+
+/* 卡片内容样式 */
+.intro-card p {
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+    z-index: 1;
+}
+
+/* 悬停效果 */
+.intro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.15);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .intro-grid {
+        margin-top: 100px;
+        min-height: auto;
+    }
+
+    .intro-card {
+        aspect-ratio: 16/10;
+    }
+
+    .intro-card p {
+        font-size: 1.5rem;
+    }
+}
+
+/* 项目部分样式调整 */
+#projects {
+    margin-top: 120px;
+    padding-top: 40px;
+}
+
+/* 内容区域宽度 */
+.intro-grid,
+.tabs {
+    width: 76%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Portfolio Header 样式 */
+.portfolio-header {
+    text-align: center;
+    padding: 120px 0 0;
+}
+
+.portfolio-header h1 {
+    font-size: 36px;
+    color: #333;
+    margin: 0;
+}
+
+/* 视频分隔符样式 */
+.video-divider {
+    width: 200px;  /* 调整为合适的宽度 */
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-divider video {
+    width: 100%;
+    display: block;
+    max-width: 100%;
+}
+
+/* 移除原来的分隔线样式 */
+/* .divider {
+    width: 1px;
+    height: 40px;
+    background-color: #333;
+    margin: 20px auto;
+} */
+
+.portfolio-header h2 {
+    font-size: 80px;
+    color: #000;
+    margin: 0;
+}
+
+/* Portfolio Grid 样式 */
+.portfolio-grid {
+    width: 76%;
+    max-width: 1200px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.portfolio-item {
+    position: relative;
+    aspect-ratio: 1;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: visible;
+}
+
+/* 项目背景图片样式 */
+.portfolio-item.blue { 
+    background-image: url('../assets/01.png');
+    transition: background-image 0.3s ease;
+}
+
+.portfolio-item.blue:hover {
+    background-image: url('../assets/011.png');
+}
+
+.portfolio-item.pink { 
+    background-image: url('../assets/02.png');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+}
+
+.portfolio-item.pink:hover {
+    background-image: url('../assets/022.png');
+}
+
+.portfolio-item.cyan { 
+    background-image: url('../assets/03.png');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+}
+
+.portfolio-item.cyan:hover {
+    background-image: url('../assets/033.png');
+}
+
+.portfolio-item.green { 
+    background-image: url('../assets/04.png');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+}
+
+.portfolio-item.green:hover {
+    background-image: url('../assets/044.png');
+}
+
+.portfolio-item.yellow { 
+    background-image: url('../assets/05.png');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+}
+
+.portfolio-item.yellow:hover {
+    background-image: url('../assets/055.png');
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+/* 确保文字在图片上清晰可见 */
+.item-number,
+.item-content h3,
+.item-content p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* 项目编号样式 */
+.item-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+    opacity: 0.8;
+}
+
+/* 项目内容样式 */
+.item-content {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    padding: 0;
+}
+
+.item-content h3 {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    font-weight: normal;
+}
+
+.item-content p {
+    display: none;
+}
+
+/* 年份样式 */
+.year {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+    margin: 80px 0;
+    padding-top: 60px;
+    position: relative;
+}
+
+/* 年份上方的竖线 */
+.year::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 40px;
+    background-color: #999;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .portfolio-header h2 {
+        font-size: 96px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-header h2 {
+        font-size: 108px;
+    }
+}
+
+/* 项目导航链接样式 - 统一样式 */
+.project-navigation {
+    position: relative;
+    width: 76%;
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 40px 0;
+    border-top: 1px solid #999;
+    background-color: transparent !important;
+}
+
+/* 深色背景项目页面的分割线和标题样式 */
+[data-project="ai-news-war"] .project-navigation,
+[data-project="scrapping"] .project-navigation {
+    border-top: 1px solid #fff;
+}
+
+[data-project="ai-news-war"] .project-navigation h3,
+[data-project="scrapping"] .project-navigation h3 {
+    color: #fff;
+}
+
+/* 其他项目页面的分割线和标题样式 */
+.project-navigation h3 {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.other-projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.project-link {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    width: 100%;
+    color: #000;  /* 确保文字颜色统一 */
+}
+
+/* 根据链接内容设置背景色 */
+.project-link[href*="echoville"] {
+    background-color: #A3EAFE;
+}
+
+.project-link[href*="gamepad"] {
+    background-color: #FF7E7F;
+}
+
+.project-link[href*="ai-news-war"] {
+    background-color: #90F1E9;
+}
+
+.project-link[href*="scrapping"] {
+    background-color: #FFDD7B;
+}
+
+.project-link[href*="diandian"] {
+    background-color: #CFFF6F;
+}
+
+/* 统一的悬停效果 */
+.project-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .project-navigation {
+        width: 90%;
+    }
+}
+
+/* 项目特定背景色 */
+body[data-project="ai-news-war"] {
+    background-color: #002228;
+}
+
+body[data-project="scrapping"] {
+    background-color: #333333;
+}
+
+/* 确保内容区域在深色背景上可见 */
+[data-project="ai-news-war"] .project-detail,
+[data-project="scrapping"] .project-detail {
+    background-color: transparent !important;  /* 确保背景透明 */
+    color: #fff;
+}
+
+[data-project="ai-news-war"] h2,
+[data-project="scrapping"] h2 {
+    color: #fff;
+}
+
+/* 项目特定背景色 */
+body.project-page[data-project="ai-news-war"] {
+    background-color: #002228 !important;  /* 使用 !important 确保优先级 */
+}
+
+body.project-page[data-project="scrapping"] {
+    background-color: #333333 !important;  /* 使用 !important 确保优先级 */
+}
+
+/* About 页面样式 */
+.about-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;  /* 改为纵向排列 */
+    align-items: center;
+    padding: 120px 0;
+    background-color: #FFFFFF;
+}
+
+.about-content {
+    width: 76%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;  /* 添加底部间距 */
+}
+
+.about-image {
+    width: 90%;  /* 缩小容器宽度 */
+    aspect-ratio: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #F5F5F5;
+    margin: 0 auto;  /* 居中显示 */
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    color: #000000;  /* 改为黑色文字 */
+}
+
+.about-text h1 {
+    font-size: 48px;
+    font-style: italic;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    color: #000000;  /* 确保标题为黑色 */
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;  /* 正文使用深灰色 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-text h1 {
+        font-size: 36px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+}
+
+/* More About 部分样式 */
+.more-about {
+    width: 76%;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.more-about h2 {
+    text-align: left;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    row-gap: 50px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.about-item {
+    text-align: center;
+    width: 100%;
+}
+
+.about-item img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+
+.about-item:hover img {
+    transform: translateY(-5px);
+}
+
+.about-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    margin-top: 12px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .more-about h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}

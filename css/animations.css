@@ -1,0 +1,146 @@
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+/* 滚动显示动画 */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.scroll-animation.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: fadeIn 1s ease-out;
+}
+
+/* 导航链接悬停效果 */
+.nav-links a {
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* 按钮悬停效果 */
+.contact-form button {
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* 添加文字渐入动画 */
+.hero-content h1 span {
+    opacity: 0;
+    transform: translateY(20px);
+    display: inline-block;
+}
+
+.hero-content h1 .name {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-content h1 .action {
+    animation: fadeInUp 0.8s ease forwards 0.3s;
+}
+
+.hero-content h1 .highlight {
+    animation: fadeInUp 0.8s ease forwards 0.5s;
+}
+
+.hero-content h1 .highlight-2 {
+    animation: fadeInUp 0.8s ease forwards 0.7s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 修改文字发光效果 */
+.hero-content .name {
+    position: relative;
+}
+
+/* 像素风格动画 */
+@keyframes pixelPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+        image-rendering: pixelated;
+    }
+}
+
+@keyframes pixelFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        image-rendering: pixelated;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        image-rendering: pixelated;
+    }
+}
+
+.project-card img {
+    image-rendering: pixelated;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.logo-image {
+    image-rendering: pixelated;
+}
